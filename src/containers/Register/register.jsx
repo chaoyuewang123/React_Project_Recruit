@@ -1,10 +1,11 @@
 import React from 'react'
+import {useNavigate } from 'react-router-dom' 
 import {NavBar, Form, Input,Radio,Button} from 'antd-mobile'
 import Logo from '../../components/logo/logo'
 
 export default function Register() {
 
-
+  const navigate = useNavigate();
   const [Username, setUsername] = React.useState("");
   const [Password, setPassword] = React.useState("");
   const [ConPassword, setConPassword] = React.useState("");
@@ -46,6 +47,10 @@ export default function Register() {
   function handleIdentity(value){
     setIdentity(value)
   }
+
+  function toLogin(){
+    navigate('/login')
+  }
   return (
     <div>
       <NavBar style={{ backgroundColor: '#1DA57A' }} back={null}>Recruit</NavBar>
@@ -70,7 +75,7 @@ export default function Register() {
         </Form.Item> 
         <Button block color='primary' size='large' onClick={register1}>Register</Button>
         &nbsp;
-      <Button block color='primary' size='large'>Login</Button>
+      <Button block color='primary' size='large' onClick={toLogin}>Login</Button>
       </Form>
     </div>
   )
