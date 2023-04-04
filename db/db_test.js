@@ -59,7 +59,25 @@ function testDelete(){
         console.log(err);
     });
 }
-testDelete()
+//testDelete()
+
+function testinster(){
+    UserModel.insertMany({
+        Username:'aaaa',
+        Password:md5('5s55'),
+        type:'2'
+    }).then((result) => {
+        console.log(result,result[0]._id);
+        // 处理插入结果
+      })
+      .catch((err) => {
+        console.log(err);
+        // 处理错误
+      });
+}
+
+testinster();
+
 /* const conn = mongoose.connection
 
 conn.on('connected',function(){
