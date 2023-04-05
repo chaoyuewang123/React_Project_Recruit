@@ -1,14 +1,29 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {useNavigate } from 'react-router-dom' 
 import {NavBar, Form, Input,Button} from 'antd-mobile'
-import Logo from '../../components/logo/logo'
+import {connect} from 'react-redux'
+import { login } from '../../redux/actions'
 
-export default function Login() {
+import Logo from '../../components/logo/logo'
+ 
+
+function Login(props) {
 
   const navigate = useNavigate();
 
   const [Username, setUsername] = React.useState("");
   const [Password, setPassword] = React.useState("");
+
+   
+  useEffect(() => {
+    if (props.user.msg) {
+      alert(props.user.msg)
+    }else{
+      const link = props.user.navigate
+      navigate(link)
+    }
+  }, [props.user])
+
 
   function Login1(){
     if(Username === ''){
@@ -25,6 +40,9 @@ export default function Login() {
       Password,
     }
     console.log(totalObj);
+
+    props.login(totalObj)
+    
   }
   }
   function handleUsername(value){
@@ -59,3 +77,4 @@ export default function Login() {
     </div>
   )
 }
+export default connect(state=>({user:state.user}),{login})(Login)

@@ -7,7 +7,7 @@ export default function App() {
     return (
         <div>
             <Routes>
-                <Route path="/register" element={<Register history={{a:1}} />}></Route>
+                <Route path="/register" element={<Register/>}></Route>
                 <Route path="/login" element={<Login/>}></Route>
                 <Route path="/" element={<Main/>}></Route>
             </Routes>

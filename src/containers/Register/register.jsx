@@ -1,15 +1,27 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {useNavigate } from 'react-router-dom' 
 import {NavBar, Form, Input,Radio,Button} from 'antd-mobile'
+import {connect} from 'react-redux'
+import { register } from '../../redux/actions'
 import Logo from '../../components/logo/logo'
 
-export default function Register() {
+function Register(props) {
 
   const navigate = useNavigate();
   const [Username, setUsername] = React.useState("");
   const [Password, setPassword] = React.useState("");
   const [ConPassword, setConPassword] = React.useState("");
-  const [Identity, setIdentity] = React.useState('1');
+  const [type, settype] = React.useState('1');
+
+ 
+  useEffect(() => {
+    if (props.user.msg) {
+      alert(props.user.msg)
+    }else{
+      const link = props.user.navigate
+      navigate(link)
+    }
+  }, [props.user])
 
   function register1(){
     if(Username === ''){
@@ -29,9 +41,17 @@ export default function Register() {
       Username,
       Password,
       ConPassword,
-      Identity
+      type
     }
     console.log(totalObj);
+   
+    props.register(totalObj)
+
+    console.log(props.user);
+/* 
+    if(props.user.type===""){
+      alert(props.user.msg)
+    } */
   }
   }
   function handleUsername(value){
@@ -45,7 +65,7 @@ export default function Register() {
     setConPassword(value)
   }
   function handleIdentity(value){
-    setIdentity(value)
+    settype(value)
   }
 
   function toLogin(){
@@ -68,7 +88,7 @@ export default function Register() {
           <Input placeholder='Confirm Password' clearable type='password' onChange={val=>{handleConPassword(val)}} value={ConPassword}/>
         </Form.Item>
         <Form.Item> 
-          <Radio.Group  onChange={val=>{handleIdentity(val)}} value={Identity}>
+          <Radio.Group  onChange={val=>{handleIdentity(val)}} value={type}>
             <Radio value='1'>Boos</Radio>&nbsp;
             <Radio value='2'>Candidates</Radio>
           </Radio.Group>
@@ -80,3 +100,6 @@ export default function Register() {
     </div>
   )
 }
+
+
+export default connect(state=>({user:state.user}),{register})(Register)
