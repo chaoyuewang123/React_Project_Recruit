@@ -46,8 +46,6 @@ function Register(props) {
     console.log(totalObj);
    
     props.register(totalObj)
-
-    console.log(props.user);
 /* 
     if(props.user.type===""){
       alert(props.user.msg)
@@ -89,7 +87,7 @@ function Register(props) {
         </Form.Item>
         <Form.Item> 
           <Radio.Group  onChange={val=>{handleIdentity(val)}} value={type}>
-            <Radio value='1'>Boos</Radio>&nbsp;
+            <Radio value='1'>Boss</Radio>&nbsp;
             <Radio value='2'>Candidates</Radio>
           </Radio.Group>
         </Form.Item> 
