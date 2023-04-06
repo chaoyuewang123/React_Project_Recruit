@@ -73,4 +73,28 @@ router.post('/login',function(req, res){
 })
 
 
+router.post('/update',function(req,res){
+  const userid = req.cookies.userid
+
+  if(!userid){
+    return res.send({code:1, msg:'Please login'})
+  }
+  const user  = req.body
+
+  UserModel.findByIdAndUpdate({_id: userid},user).then((oldUser) => {
+    if(!oldUser){
+      res.clearCookie('userid')
+      res.send({code:1,msg:'Please Login first'})
+    }else{
+      const {_id,Username,type} = oldUser
+      const data = Object.assign(user,{_id,Username,type})
+      res.send({code:0,data})
+
+    }
+}).catch((err) => {
+    console.log(err);
+});
+})
+
+
 module.exports = router;
