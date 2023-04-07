@@ -31,7 +31,7 @@ import {updataUser} from '../../redux/actions'
 
   function handleSave(){
     const totalObj = {
-      Avatar,
+      Avatar:Avatar,
       JobSearch,
       PersonalIntroduction
     }

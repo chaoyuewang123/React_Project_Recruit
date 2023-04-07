@@ -1,0 +1,12 @@
+.am-tab-bar{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: inherit;
+}
+
+.error-msg {
+    color: red;
+    text-align: center;
+    font-size: 18px;
+    }

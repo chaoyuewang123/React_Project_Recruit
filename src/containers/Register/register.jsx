@@ -21,7 +21,7 @@ function Register(props) {
       const link = props.user.navigate
       navigate(link)
     }
-  }, [props.user])
+  }, [props.user.msg])
 
   function register1(){
     if(Username === ''){
@@ -41,7 +41,9 @@ function Register(props) {
       Username,
       Password,
       ConPassword,
-      type
+      type,
+      Position:'',
+      Company:'',
     }
     console.log(totalObj);
    
@@ -50,6 +52,7 @@ function Register(props) {
     if(props.user.type===""){
       alert(props.user.msg)
     } */
+
   }
   }
   function handleUsername(value){
@@ -73,7 +76,7 @@ function Register(props) {
     <div>
       <NavBar style={{ backgroundColor: '#1DA57A' }} back={null}>Recruit</NavBar>
       <Logo/>
-      
+      {props.user.msg ? <div className='error-msg'>{props.user.msg}</div> : null}
       <Form layout='horizontal' mode='card' style={{border:'1px ridge', borderRadius:'12px',width:'90%',marginLeft:'5%'}}>
       <Form.Header />
         <Form.Item>

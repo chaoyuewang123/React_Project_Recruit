@@ -14,7 +14,6 @@ function Login(props) {
   const [Username, setUsername] = React.useState("");
   const [Password, setPassword] = React.useState("");
 
-   
   useEffect(() => {
     if (props.user.msg) {
       alert(props.user.msg)
@@ -22,7 +21,7 @@ function Login(props) {
       const link = props.user.navigate
       navigate(link)
     }
-  }, [props.user])
+  }, [props.user.msg])
 
 
   function Login1(){
@@ -41,8 +40,15 @@ function Login(props) {
     }
     console.log(totalObj);
 
-    props.login(totalObj)
     
+
+    if (props.user.msg) {
+      alert(props.user.msg)
+    }else{
+      const link = props.user.navigate
+      navigate(link)
+    }
+    props.login(totalObj)
   }
   }
   function handleUsername(value){
@@ -61,7 +67,7 @@ function Login(props) {
     <div>
       <NavBar style={{ backgroundColor: '#1DA57A' }} back={null}>Recruit</NavBar>
       <Logo/>
-      
+      {props.user.msg ? <div className='error-msg'>{props.user.msg}</div> : null}
       <Form layout='horizontal' mode='card' style={{border:'1px ridge', borderRadius:'12px',width:'90%',marginLeft:'5%'}}>
       <Form.Header />
         <Form.Item>

@@ -5,7 +5,7 @@ export function getnavigate(type,Avatar){
         path = '/boss'
     }
     else{
-        path = '/candidates'
+        path = '/candidate'
     }
     if(!Avatar){
         path +='info'

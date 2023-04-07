@@ -1,6 +1,6 @@
 import React from 'react'
 import { List,Grid,Image} from 'antd-mobile' 
-import PropTypes, { func } from 'prop-types'
+
 
 
 
