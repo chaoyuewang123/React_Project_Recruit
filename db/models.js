@@ -11,10 +11,12 @@ const UserSchema = mongoose.Schema({
     Password: {type: String, required: true}, 
     type: {type: String, required: true}, 
     Avatar: {type: Object}, 
-    post: {type: String}, 
-    info: {type: String}, 
-    company: {type: String}, 
-    salary: {type: String} 
+    Position: {type: String}, 
+    Required: {type: String}, 
+    Company: {type: String}, 
+    Salary: {type: String},
+    JobSearch:{type:String},
+    PersonalIntroduction:{type:String}
 })
 
 const UserModel = mongoose.model('users',UserSchema)

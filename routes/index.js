@@ -80,7 +80,7 @@ router.post('/update',function(req,res){
     return res.send({code:1, msg:'Please login'})
   }
   const user  = req.body
-
+  console.log(user);
   UserModel.findByIdAndUpdate({_id: userid},user).then((oldUser) => {
     if(!oldUser){
       res.clearCookie('userid')
@@ -93,6 +93,33 @@ router.post('/update',function(req,res){
     }
 }).catch((err) => {
     console.log(err);
+});
+})
+
+
+
+router.get('/user',function(req,res){
+  const userid = req.cookies.userid
+  if(!userid){
+    return res.send({code:1, msg:'Please login'})
+  }
+  UserModel.findOne({_id: userid},{Password:0}).then((user) => {
+    res.send({code:0,data:user})
+
+
+}).catch((err) => {
+    console.log(err);
+});
+})
+
+
+router.get('/userlist',function(req,res){
+
+const {type} = req.query
+UserModel.find({type},{Password:0}).then((users) => {
+  res.send({code:0,data:users})
+}).catch((err) => {
+  console.log(err);
 });
 })
 
