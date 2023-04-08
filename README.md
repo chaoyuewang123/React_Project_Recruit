@@ -17,42 +17,44 @@ This project helped me a lot to understand the importance of routing for the who
 ### UI
 
 <div>     
-    <img src="C:\Users\10618\Desktop\react_recruit/1.png">
-    <img src="C:\Users\10618\Desktop\react_recruit/2.png" style="float:right; margin-left:10px;">
+    <img src="./imgs/1.png">
+    <img src="./imgs/2.png" style="float:right; margin-left:10px;">
 </div>
 
 <div>     
-    <img src="C:\Users\10618\Desktop\react_recruit/7.png">
-    <img src="C:\Users\10618\Desktop\react_recruit/8.png" style="float:right; margin-left:10px;">
+    <img src="./imgs/7.png">
+    <img src="./imgs/8.png" style="float:right; margin-left:10px;">
 </div>
 
 
-
-
-
-<div>     
-    <img src="C:\Users\10618\Desktop\react_recruit/3.png">
-    <img src="C:\Users\10618\Desktop\react_recruit/6.png" style="float:right; margin-left:10px;">
-</div>
 
 
 
 <div>     
-    <img src="C:\Users\10618\Desktop\react_recruit/5.png">
-    <img src="C:\Users\10618\Desktop\react_recruit/4.png" style="float:right; margin-left:10px;">
+    <img src="./imgs/3.png">
+    <img src="./imgs/4.png" style="float:right; margin-left:10px;">
 </div>
+
+
+
+<div>     
+    <img src="./imgs/4.png">
+    <img src="./imgs/5.png" style="float:right; margin-left:10px;">
+</div>
+
 
 
 
 ### Guide Map
 
 <div>     
-    <img src="C:\Users\10618\Desktop\react_recruit/9.png">
+    <img src="./imgs/9.png">
 </div>
 
 <div>     
-    <img src="C:\Users\10618\Desktop\react_recruit/10.png">
+    <img src="./imgs/10.png">
 </div>
+
 
 
 
