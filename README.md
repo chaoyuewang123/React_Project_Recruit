@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Mobile web recruit application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##### This one is a personal practice project for me, imitating recruitment software. 
 
-## Available Scripts
+This project is a front and back office separated recruitment SPA, including front-end applications and back-end applications.
 
-In the project directory, you can run:
+Developed in modular, component-based and engineering mode, function includes user registration/login, god/boss list, live chat and other modules.
 
-### `npm start`
+Front-end (main technology stack): React+Redux+ES6+Webpack .
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Backend (main technology stack): Node + express + mongodb + socketIO .
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project helped me a lot to understand the importance of routing for the whole SPA project, and the basic logic of front and back end  interaction. There is also componentized coding, if the componentization is very reasonable, the code reuse rate will be greatly improved.
 
-### `npm run build`
+### UI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<div>     
+    <img src="C:\Users\10618\Desktop\react_recruit/1.png">
+    <img src="C:\Users\10618\Desktop\react_recruit/2.png" style="float:right; margin-left:10px;">
+</div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<div>     
+    <img src="C:\Users\10618\Desktop\react_recruit/7.png">
+    <img src="C:\Users\10618\Desktop\react_recruit/8.png" style="float:right; margin-left:10px;">
+</div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<div>     
+    <img src="C:\Users\10618\Desktop\react_recruit/3.png">
+    <img src="C:\Users\10618\Desktop\react_recruit/6.png" style="float:right; margin-left:10px;">
+</div>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<div>     
+    <img src="C:\Users\10618\Desktop\react_recruit/5.png">
+    <img src="C:\Users\10618\Desktop\react_recruit/4.png" style="float:right; margin-left:10px;">
+</div>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Guide Map
 
-### Analyzing the Bundle Size
+<div>     
+    <img src="C:\Users\10618\Desktop\react_recruit/9.png">
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<div>     
+    <img src="C:\Users\10618\Desktop\react_recruit/10.png">
+</div>
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+### Summary
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This is an exercise program that I found on the internet by myself. I didn't finish it very well because it was a very old project, and when I got stuck, a lot of the old code in the tutorials didn't work anymore, and I tried my best to replace them all with new ones. However, it was painful for me to learn this way, and pain can be very demoralizing. So I gave up for now, the old code is useless for learning value. Nevertheless, I learned a lot about the process and thinking. The reward for the effort. Keep going.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
