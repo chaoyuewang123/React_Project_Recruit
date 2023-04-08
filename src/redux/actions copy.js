@@ -29,7 +29,7 @@ export const register = (user) => {
         const reponse = await reqRegister({ Username, Password, type })
         const result = reponse.data
         if (result.code === 0) {
-            getMsgList(dispatch,result.data._id)
+            getMsgList(dispatch,result._id)
             dispatch(auth_success(result.data))
             
         }
@@ -47,7 +47,7 @@ export const login = (user) => {
         const reponse = await reqLogin({ Username, Password })
         const result = reponse.data
         if (result.code === 0) {
-            getMsgList(dispatch,result.data._id)
+            getMsgList(dispatch,result._id)
             dispatch(auth_success(result.data))
         }
         else {
@@ -76,7 +76,7 @@ export const getUser = () => {
         const response = await reqUser()
         const result = response.data
         if (result.code === 0) {
-            getMsgList(dispatch,result.data._id)
+            getMsgList(dispatch,result._id)
             dispatch(receive_user(result.data))
         } else {
             dispatch(reset_user(result.msg))
@@ -109,9 +109,7 @@ function initIO(dispatch,userid) {
          io.socket = io('ws://localhost:4001')
 
          io.socket.on('receiveMsg', function (chatMsgs) {
-
             if(userid === chatMsgs.from || userid === chatMsgs.to){
-                
                 dispatch(receive_msg(chatMsgs))
             }
         })

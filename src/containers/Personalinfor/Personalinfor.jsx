@@ -12,11 +12,13 @@ function Personalinfor(props) {
 
   /*   icon={<img src={require(`../../assets/Images/头像${Avatar.text}.png`)} />} */
   return (
-    <div>
+    <div >
     <Result
+    style={{paddingTop:'50px'}}
     icon={<img src={require(`../../assets/Images/头像${Avatar.text}.png`)} />}
     title={Usename}
     description={Company}
+    
   />
   <List header='基础用法'>
   <Grid columns={1}>

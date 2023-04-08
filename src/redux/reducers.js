@@ -1,5 +1,11 @@
 import {combineReducers} from 'redux'
-import {AUTH_SUCCESS,ERROR_MSG,RECEIVE_USER,RECEIVE_USER_lIST,RESET_USER} from './action-types'
+import {AUTH_SUCCESS,
+    ERROR_MSG,RECEIVE_USER,
+    RECEIVE_USER_lIST,
+    RESET_USER,
+    RECEIVE_MSG_lIST,
+    RECEIVE_MSG
+} from './action-types'
 import {getnavigate} from '../utils/index'
 
 
@@ -37,9 +43,36 @@ function userList(state=initUserList,action){
     }
 }
 
+const initChat ={
+    users:{},
+    chatMsgs:[],
+    unReadCount:0
+}
+
+function chat(state=initChat,action){
+    switch(action.type){
+        case RECEIVE_MSG_lIST:
+            const {users,chatMsgs} = action.data
+            return {
+                users,
+                chatMsgs,
+                unReadCount:0
+            }
+        case RECEIVE_MSG:
+            return{
+                users:state.users,
+                chatMsgs:[...state.chatMsgs, action.data.chatMsgs],
+                unReadCount:0
+            }
+        default:
+            return state
+    }
+}
+
 
 export default combineReducers({
     user,
-    userList
+    userList,
+    chat
 })
 

@@ -14,7 +14,8 @@ import NavFooter from './components/Nav-Footer/Nav-Footer';
 import React from 'react'
 import { connect } from 'react-redux'
 import { getUser } from './redux/actions'; 
-
+import Chat from './containers/chat/chat'
+import './index.css'
 
 
  function App(props) {
@@ -69,7 +70,7 @@ import { getUser } from './redux/actions';
 
     return (
         <div>
-            {currentNav ?  <NavBar style={{ backgroundColor: '#1DA57A' }} back={null}>{currentNav.title}</NavBar> : null}
+            {currentNav ?  <NavBar style={{zIndex:'10', position:'fixed',width:'100%', backgroundColor: '#1DA57A'}} back={null}>{currentNav.title}</NavBar> : null}
            
             <Routes>
                 {
@@ -81,6 +82,7 @@ import { getUser } from './redux/actions';
                 <Route path='/bossinfo' element={<Bossinfo />}></Route>
                 <Route path='/candidateinfo' element={<Candidateinfo />}></Route>
                 <Route path='/notfound' element={<Notfound />}></Route>
+                <Route path='/chat/:userid' element={<Chat/>}></Route>
             </Routes>
             {currentNav ? <NavFooter navList={newnavList} />  : null}
         </div>

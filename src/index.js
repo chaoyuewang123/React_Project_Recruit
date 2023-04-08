@@ -14,6 +14,7 @@ import {Provider} from 'react-redux'
 import App from './App';
 import './index.css'
 import store from './redux/store'
+/* import './test/socketio_test' */
 
 const container = document.getElementById('root');
 const root = createRoot(container);

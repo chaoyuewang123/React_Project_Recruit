@@ -23,31 +23,19 @@ import { getUser } from '../../redux/actions';
 
 
     if(!user._id){
-      if(userid){
+
         props.getUser()
-      }
+
     }
     else{
       if(pathname === '/'){
+
         const path = getnavigate(user.type,user.Avatar)
-        console.log(path);
         navigate(path)
       }
     }
     
-/*     if(!props.user._id){
-      navigate('/login')
-    } */
-/*     const {Avatar,type} = props.user
-    if(Avatar){
-      if(type === '1'){
-        navigate('/boss')
-      }
-      else{
-        navigate('/candidate')
-      }
-    } */
-  }, [props.user,navigate]);
+  }, [props.user]);
 
 
 
