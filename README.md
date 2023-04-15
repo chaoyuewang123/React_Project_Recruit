@@ -2,7 +2,7 @@
 
 ##### This one is a personal practice project for me, imitating recruitment software. 
 
-This project is a front and back office separated recruitment SPA, including front-end applications and back-end applications.
+This project is a front and back separated recruitment SPA, including front-end applications and back-end applications.
 
 Developed in modular, component-based and engineering mode, function includes user registration/login, god/boss list, live chat and other modules.
 
